@@ -3,7 +3,7 @@ import React from 'react';
 
 const Top_notification = () => {
   return (
-    <div className="bg-[#013D29] w-full flex items-center justify-between px-5 py-1 ">
+    <div className="bg-[#013D29] w-full items-center justify-between px-5 py-1 hidden md:flex ">
       <div className="flex items-center gap-5">
         <Image
           src="/bell-icon.svg"

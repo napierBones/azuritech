@@ -1,32 +1,25 @@
-import Image from 'next/image';
 import React from 'react';
+import Deal_like from './Deal_like';
+import Image from 'next/image';
+import Rating from './Rating';
 import { PiSealPercentFill } from 'react-icons/pi';
 import { CiLocationOn } from 'react-icons/ci';
 import Popup_more_button from './Popup_more_button';
-import { cn } from '@/lib/utils';
-import Rating from './Rating';
-import Deal_like from './Deal_like';
-
 interface NearbyDeal {
   image: string;
   avatar: string;
   class: string;
 }
-const Deal_card = ({ deal }: { deal: NearbyDeal }) => {
+const Deal_card1 = ({ deal }: { deal: NearbyDeal }) => {
   return (
-    <div
-      className={cn(
-        ' h-[40vw] flex flex-col items-start justify-start border rounded-2xl overflow-hidden',
-        deal.class, 
-      )}
-    >
+    <div className=" h-[500px] flex flex-col items-start justify-start border rounded-2xl overflow-hidden w-full">
       <div className="w-full h-1/2 relative">
-       <Deal_like/>
+        <Deal_like />
         <Image src={deal.image} alt="deals" fill className="object-cover" />
       </div>
 
       <div className="p-2 flex flex-col  h-1/2 gap-2 w-full">
-        <div className="flex flex-row items-center justify-between gap-5 p-2">
+        <div className="flex flex-row items-center justify-between gap-1 p-1">
           <Rating />
           <p className="whitespace-nowrap flex flex-row gap-1 items-center">
             <span>
@@ -69,4 +62,4 @@ const Deal_card = ({ deal }: { deal: NearbyDeal }) => {
   );
 };
 
-export default Deal_card;
+export default Deal_card1;

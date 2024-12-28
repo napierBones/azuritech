@@ -22,15 +22,15 @@ const paras = [
 
 const Motivation_Description = () => {
   return (
-    <div className="flex flex-row justify-between items-center w-[80%] p-5 border-t">
+    <div className="flex flex-col md:flex-row md:justify-between justify-center items-center md:w-[80%] p-5 border-t max-md:pt-[300px]">
       {paras.map((para, index) => {
         const { heading, text, icon: Icon } = para;
         return (
           <div
         
              className={cn(
-                'p-5 flex flex-row items-center justify-between gap-5 w-1/3 h-full',
-                { 'border-r-2 border-l-2': index === 1 } 
+                'p-5 flex flex-row items-center justify-between gap-5 md:w-1/3 w-full h-full',
+                { 'md:border-r-2 md:border-l-2': index === 1 } 
               )}
             key={index}
           >
@@ -44,7 +44,7 @@ const Motivation_Description = () => {
               />
             </div>
             <div className="w-[80%] flex flex-col gap-2 items-start justify-start h-full">
-              <p className='font-bold text-xl h-11'>{heading}</p>
+              <p className='font-bold text-xl md:h-22  xl:h-11  '>{heading}</p>
               <p>{text}</p>
             </div>
           </div>

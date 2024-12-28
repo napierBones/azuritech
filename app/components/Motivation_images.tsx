@@ -31,7 +31,7 @@ const images = [
 ];
 const Motivation_images = () => {
   return (
-    <div className="flex flex-row justify-between items-center w-[80%] p-5 mt-28">
+    <div className="hidden md:flex flex-row justify-between items-center w-[80%] p-5 mt-28">
       {images.map((image, index) => {
         const { url: link, text, color } = image;
         return (

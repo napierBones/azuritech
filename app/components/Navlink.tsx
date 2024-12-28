@@ -29,7 +29,7 @@ const links = [
 
 const Navlink = () => {
   return (
-    <div className="flex flex-row justify-around px-5">
+    <div className="hidden md:flex flex-row justify-around px-5">
       {links.map((link, index) => {
         const { icon: Icon, text } = link;
         return (

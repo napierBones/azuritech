@@ -34,16 +34,16 @@ const stats = [
 const Stats = () => {
   return (
     <div className="w-full flex flex-row items-center justify-center border-t">
-      <div className="w-[80%] flex flex-row items-center justify-between p-5">
+      <div className="w-full md:w-[80%] flex md:flex-row  flex-wrap items-center justify-between md:p-5 p-1">
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center gap-3 p-1"
+            className="max-md:w-[40%]  flex flex-col items-center justify-center md:gap-5 md:p-5 max-md:m-3"
           >
             {index === 2 || index === 3 ? (
-              <p className="font-bold text-4xl">{numberToWords(stat.number)}</p>
+              <p className="font-bold md:text-4xl">{numberToWords(stat.number)}</p>
             ) : (
-              <p className="font-bold text-4xl">
+              <p className="font-bold md:text-4xl">
                 <CountUp
                   duration={1}
                   decimals={0}
